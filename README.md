@@ -8,11 +8,16 @@ Se creará una primera línea base con todos los archivos existentes al momento 
 
 ---
 
-**Estructura del repositorio:**
+## **Estructura del repositorio**
 - 📂 **Teórico/**
   - 📁 **Presentaciones de clase/**
   - 📁 **Resúmenes/**
   - 📁 **Bibliografía/**
+    - 📁 **Ingeniería de Software/**
+    - 📁 **Testing de Software/**
+    - 📁 **Agile/**
+    - 📁 **Lean y Kanban/**
+    - 📁 **SCM/**
   - 📁 **Toma de notas/**
 
 - 📂 **Práctico/**
@@ -26,6 +31,7 @@ Se creará una primera línea base con todos los archivos existentes al momento 
 - 📂 **Programa de la materia/**
 
 - 📂 **Cronograma de clases/**
+
 
 ---
 
