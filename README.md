@@ -1,30 +1,33 @@
 # PLAN DE CONFIGURACIÓN Y ESTRUCTURA
 
-**Link al Repositorio de Acceso Público:**
-El repositorio de acceso público se encuentra en la plataforma GitHub.  
-[Link repositorio ICS](https://github.com/tomasparis10/ICS_Grupo_2024)  
+Este plan describe la configuración y estructura del repositorio que se utilizará para la materia Ingeniería y Calidad de Software (ICS). El objetivo es establecer una organización clara de los archivos teóricos y prácticos, así como un criterio de línea base que permita mantener un registro ordenado de las versiones a lo largo del curso.
+
 
 **Criterio de Línea Base:**
 Se creará una primera línea base con todos los archivos existentes al momento de crear el repositorio. Las siguientes líneas base se crearán luego de la corrección de cada parcial.
 
+---
+
 **Estructura del repositorio:**
-- **`Teórico/`**
-  - **`Presentaciones de clase/`**
-  - **`Resúmenes/`**
-  - **`Bibliografía/`**
-  - **`Toma de notas/`**
+- 📂 **Teórico/**
+  - 📁 **Presentaciones de clase/**
+  - 📁 **Resúmenes/**
+  - 📁 **Bibliografía/**
+  - 📁 **Toma de notas/**
 
-- **`Práctico/`**
-  - **`Guías/`**
-  - **`Trabajos Prácticos/`**
-  - **`Ejercicios de clases/`**
-  - **`Trabajos de investigación/`**
+- 📂 **Práctico/**
+  - 📁 **Guías/**
+  - 📁 **Trabajos Prácticos/**
+  - 📁 **Ejercicios de clases/**
+  - 📁 **Trabajos de investigación/**
 
-- **`Clases grabadas/`**
+- 📂 **Clases grabadas/**
 
-- **`Programa de la materia/`**
+- 📂 **Programa de la materia/**
 
-- **`Cronograma de clases/`**
+- 📂 **Cronograma de clases/**
+
+---
 
 **Listado de Ítems de Configuración**
 
@@ -41,6 +44,8 @@ Se creará una primera línea base con todos los archivos existentes al momento 
 | Clases grabadas              | `ClasesGrabadas.xlsx` | ICS_Grupo_2024/ |
 | Programa de la materia       | `Programa_ICS_2024.pdf` | ICS_Grupo_2024/ |
 | Cronograma de clases         | `Cronograma_4K2_2024.xlsx` | ICS_Grupo_2024/ |
+
+---
 
 **Glosario**
 
