@@ -41,7 +41,7 @@ Se creará una primera línea base una vez que se hayan cargado todos los archiv
 |------------------------------|-------------------|------------------|
 | Presentaciones de clase      | `<<NroClase>>_<<Contenido>>.pdf` | ICS_Grupo_2024/Teórico/Presentaciones de clase |
 | Resúmenes                    | `Resumen<<Alumno>>_Unidad<<N>>.docx` | ICS_Grupo_2024/Teórico/Resúmenes |
-| Bibliografía                 | `<<Titulo>>_<<Autor>>.pdf` | ICS_Grupo_2024/Bibliografía<<Tema>> |
+| Bibliografía                 | `<<Titulo>>_<<Autor>>.pdf` | ICS_Grupo_2024/Bibliografía/`<<Tema>>` |
 | Toma de notas                | `clase<<fecha>>_<<Alumno>>.docx` | ICS_Grupo_2024/Teórico/Toma de notas |
 | Guías                        | `Guia_<<Contenido>>.pdf` | ICS_Grupo_2024/Práctico/Guías |
 | Trabajos Prácticos           | `TP<<N>>_<<Nombre>>.pdf` | ICS_Grupo_2024/Práctico/Trabajos Prácticos |
