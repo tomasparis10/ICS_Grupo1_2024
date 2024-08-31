@@ -4,7 +4,7 @@ Este plan describe la configuración y estructura del repositorio que se utiliza
 
 
 **Criterio de Línea Base:**
-Se creará una primera línea base con todos los archivos existentes al momento de crear el repositorio. Las siguientes líneas base se crearán luego de la corrección de cada parcial.
+Se creará una primera línea base una vez que se hayan cargado todos los archivos correspondientes al primer trabajo práctico (TP) evaluable en el repositorio. Las siguientes líneas base se generarán luego de la corrección de cada parcial.
 
 ---
 
@@ -41,7 +41,7 @@ Se creará una primera línea base con todos los archivos existentes al momento 
 |------------------------------|-------------------|------------------|
 | Presentaciones de clase      | `<<NroClase>>_<<Contenido>>.pdf` | ICS_Grupo_2024/Teórico/Presentaciones de clase |
 | Resúmenes                    | `Resumen<<Alumno>>_Unidad<<N>>.docx` | ICS_Grupo_2024/Teórico/Resúmenes |
-| Bibliografía                 | `<<Titulo>>_<<Autor>>.pdf` | ICS_Grupo_2024/Bibliografía |
+| Bibliografía                 | `<<Titulo>>_<<Autor>>.pdf` | ICS_Grupo_2024/Bibliografía<<Tema>> |
 | Toma de notas                | `clase<<fecha>>_<<Alumno>>.docx` | ICS_Grupo_2024/Teórico/Toma de notas |
 | Guías                        | `Guia_<<Contenido>>.pdf` | ICS_Grupo_2024/Práctico/Guías |
 | Trabajos Prácticos           | `TP<<N>>_<<Nombre>>.pdf` | ICS_Grupo_2024/Práctico/Trabajos Prácticos |
