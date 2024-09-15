@@ -10,7 +10,8 @@ const Home = () => {
             fechaRetiro: '25/09/2024',
             fechaEntrega: '30/09/2024',
             precio: 500,
-            estrellas: 4
+            estrellas: 4,
+            imagen: '/img/julian.jpg' // Imagen personalizada
         },
         {
             nroPedido: '2',
@@ -18,15 +19,17 @@ const Home = () => {
             fechaRetiro: '01/10/2024',
             fechaEntrega: '05/10/2024',
             precio: 750,
-            estrellas: 5
+            estrellas: 5,
+            imagen: '/img/messi.jpg' // Imagen personalizada
         },
         {
             nroPedido: '3',
-            nombreChofer: 'Carlos Tevez',
+            nombreChofer: 'Lautaro Martínez',
             fechaRetiro: '15/09/2024',
             fechaEntrega: '20/09/2024',
             precio: 400,
-            estrellas: 3
+            estrellas: 3,
+            imagen: '/img/lautaro.jpg' // Imagen personalizada
         },
         {
             nroPedido: '4',
@@ -34,7 +37,8 @@ const Home = () => {
             fechaRetiro: '10/10/2024',
             fechaEntrega: '15/10/2024',
             precio: 600,
-            estrellas: 4
+            estrellas: 4,
+            imagen: '/img/angel.jpg' // Imagen personalizada
         },
         {
             nroPedido: '5',
@@ -42,7 +46,8 @@ const Home = () => {
             fechaRetiro: '20/10/2024',
             fechaEntrega: '25/10/2024',
             precio: 550,
-            estrellas: 4
+            estrellas: 4,
+            imagen: '/img/dybala.jpg' // Imagen personalizada
         },
         {
             nroPedido: '6',
@@ -50,7 +55,8 @@ const Home = () => {
             fechaRetiro: '30/09/2024',
             fechaEntrega: '05/10/2024',
             precio: 800,
-            estrellas: 5
+            estrellas: 5,
+            imagen: '/img/aguero.jpg' // Imagen personalizada
         },
         {
             nroPedido: '7',
@@ -58,7 +64,8 @@ const Home = () => {
             fechaRetiro: '08/10/2024',
             fechaEntrega: '12/10/2024',
             precio: 650,
-            estrellas: 4
+            estrellas: 4,
+            imagen: '/img/de paul.jpg' // Imagen personalizada
         },
         {
             nroPedido: '8',
@@ -66,7 +73,8 @@ const Home = () => {
             fechaRetiro: '18/09/2024',
             fechaEntrega: '23/09/2024',
             precio: 700,
-            estrellas: 5
+            estrellas: 5,
+            imagen: '/img/dibu.jpg' // Imagen personalizada
         },
     ];
     
@@ -89,6 +97,7 @@ const Home = () => {
                             fechaEntrega={transportista.fechaEntrega}
                             precio={transportista.precio}
                             estrellas={transportista.estrellas}
+                            imagen={transportista.imagen}
                         />
                     ))}
                 </div>

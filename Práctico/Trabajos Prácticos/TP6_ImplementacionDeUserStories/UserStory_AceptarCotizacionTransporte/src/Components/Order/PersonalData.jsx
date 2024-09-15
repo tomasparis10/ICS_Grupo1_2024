@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaCcVisa, FaCcMastercard, FaCreditCard } from 'react-icons/fa'; // Importamos los íconos
+
 
 const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }) => {
   const [errors, setErrors] = useState({});
+  const [cardType, setCardType] = useState(null); // Estado para almacenar el tipo de tarjeta
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -11,6 +14,25 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
       [e.target.name]: e.target.value
     });
   };
+
+  // Detectar el tipo de tarjeta
+  const detectCardType = (cardNumber) => {
+    const cleaned = cardNumber.replace(/\D+/g, ''); // Eliminamos los caracteres no numéricos
+    if (cleaned.startsWith('4')) {
+      setCardType('visa');
+    } else if (/^5[1-5]/.test(cleaned)) {
+      setCardType('mastercard');
+    } else {
+      setCardType('other');
+    }
+  };
+
+  const formatCardNumber = (value) => {
+    const cleaned = value.replace(/\D+/g, '');
+    detectCardType(cleaned); // Llamamos a la función para detectar el tipo de tarjeta
+    return cleaned.slice(0, 16).match(/.{1,4}/g)?.join('-') || '';
+  };
+
 
   const formatExpiryDate = (value) => {
     // Elimina cualquier carácter no numérico
@@ -37,11 +59,6 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
     });
   }
 
-  const formatCardNumber = (value) => {
-    const cleaned = value.replace(/\D+/g, '');
-    return cleaned.slice(0, 16).match(/.{1,4}/g)?.join('-') || '';
-  };
-
   const handleCardNumberChange = (e) => {
     const formattedValue = formatCardNumber(e.target.value);
     setData({
@@ -60,9 +77,19 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      navigate("/detalle", { state: { pedido: dataPedido.nroPedido, nombre: dataPedido.nombre, fechaRetiro: dataPedido.fechaRetiro, fechaEntrega: dataPedido.fechaEntrega, total: dataPedido.precio, formaPago: 'Debito/Credito', tarjeta: data.nroTarjeta } });
+      navigate("/detalle", {
+        state: {
+          pedido: dataPedido.nroPedido,
+          nombre: dataPedido.nombre,
+          fechaRetiro: dataPedido.fechaRetiro,
+          fechaEntrega: dataPedido.fechaEntrega,
+          total: dataPedido.precio,
+          formaPago: 'Debito/Credito',
+          tarjeta: data.nroTarjeta
+        }
+      });
     }
-  }
+  };
 
   const validateForm = () => {
     const errors = {};
@@ -92,6 +119,8 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
       errors.nroTarjeta = 'El número de tarjeta es requerido.';
     } else if (!/^\d{16}$/.test(cleanCardNumber)) {
       errors.nroTarjeta = 'El número de tarjeta debe tener 16 dígitos.';
+    } else if (cardType !== 'visa' && cardType !== 'mastercard') {
+      errors.nroTarjeta = 'La tarjeta debe ser Visa o MasterCard.';
     }
 
     // Validar fecha de vencimiento (formato MM/AA)
@@ -171,7 +200,8 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
           </p>}
         </div>
 
-        <div>
+
+        <div className="relative">
           <input
             name="nroTarjeta"
             value={data.nroTarjeta}
@@ -180,10 +210,18 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
             placeholder="Nro de tarjeta"
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
+          {/* Mostramos el ícono de la tarjeta según el tipo */}
+          <div className="absolute right-3 top-3">
+            {cardType === 'visa' && <FaCcVisa size={24} color="#1A1F71" />}
+            {cardType === 'mastercard' && <FaCcMastercard size={24} color="#EB001B" />}
+            {cardType === 'other' && <FaCreditCard size={24} />}
+          </div>
           {errors.nroTarjeta && <p className="text-red-500 text-sm bg-red-100 p-2 rounded-lg mt-2">
             {errors.nroTarjeta}
           </p>}
         </div>
+
+
 
         <div>
           <input
@@ -215,16 +253,23 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
         <div className="flex space-x-2 mt-4 justify-center">
           <button
             type="button"
-            className="bg-[#4CAF50] text-white px-4 py-2 rounded-lg hover:bg-[#45a049] transition-colors duration-300"
+            className="bg-[#90E0EF] text-white px-4 py-2 rounded-lg hover:bg-[#CAF0F8] hover:outline hover:outline-2 hover:outline-black transition-colors duration-300"
             onClick={handleBack}
           >
-            Atras
+            <p className="text-black font-bold">Atrás</p>
+
+          </button>
+          <button
+            type="button"
+            className="bg-[#ff2828] text-white px-4 py-2 rounded-lg hover:bg-[#f84f4f] hover:outline hover:outline-2 hover:outline-white transition-colors duration-300 font-bold"
+            onClick={handleCancel}>
+            Cancelar
           </button>
           <button
             type="submit"
-            className="bg-[#03045E] text-white px-4 py-2 rounded-lg hover:bg-[#0056b3] transition-colors duration-300"
+            className="bg-[#00025f] text-white px-4 py-2 rounded-lg hover:bg-[#040799c5] hover:outline hover:outline-2 hover:outline-white transition-colors duration-300"
           >
-            Confirmar
+            <p className='font-bold'>Confirmar</p>
           </button>
         </div>
       </form>

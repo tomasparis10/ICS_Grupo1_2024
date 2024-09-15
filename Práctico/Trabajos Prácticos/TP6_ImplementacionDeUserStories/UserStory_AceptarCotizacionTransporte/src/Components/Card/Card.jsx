@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Card.css'; // Importa el archivo de estilos
 import { useConfirmation } from '../../context/contextConfirmation';
 
-const Card = ({ nroPedido, nombreChofer, fechaRetiro, fechaEntrega, precio, estrellas }) => {
+const Card = ({ nroPedido, nombreChofer, fechaRetiro, fechaEntrega, precio, estrellas, imagen }) => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { confirmation } = useConfirmation();
@@ -12,7 +12,7 @@ const Card = ({ nroPedido, nombreChofer, fechaRetiro, fechaEntrega, precio, estr
     const handleOnClick = () => {
 
         if (confirmation) {
-            // localStorage.setItem('confirmacion', JSON.stringify(confirmation)); 
+            // localStorage.setItem('confirmacion', JSON.stringify(confirmation));
             setFlagConfirmation(true);
             return;
         }
@@ -39,14 +39,14 @@ const Card = ({ nroPedido, nombreChofer, fechaRetiro, fechaEntrega, precio, estr
     return (
         <div className="relative max-w-sm bg-[#0077B6] border border-gray-200 rounded-xl shadow p-5">
             <a href="#">
-                <img className="rounded-t-xl" src="/img/hombre-conduciendo.jpg" alt="Conductor" />
+                <img className="rounded-t-xl w-full h-48 object-cover" src={imagen} alt="Conductor" />
             </a>
             <div className="p-5 text-white">
-
                 {/* Estrellas */}
                 <div className="flex justify-between items-center mb-4">
                     <div className="flex">{renderStars()}</div>
                 </div>
+
                 {/* Nombre del conductor */}
                 <a href="#">
                     <h5 className="mb-2 text-2xl font-bold">{nombreChofer}</h5>
@@ -80,7 +80,7 @@ const Card = ({ nroPedido, nombreChofer, fechaRetiro, fechaEntrega, precio, estr
                 {/* Botón Contratar */}
                 <div className="flex justify-center">
                     <button
-                        className="w-[80%] inline-flex items-center justify-center px-6 py-3 text-lg font-bold text-white bg-[#03045E] rounded-lg hover:bg-[#003d7a] focus:ring-4 focus:outline-none focus:ring-blue-300 transition-colors duration-300"
+                        className="w-[80%] inline-flex items-center justify-center px-6 py-3 text-lg font-bold text-white bg-[#00025f] rounded-lg hover:bg-[#040799c5] hover:outline hover:outline-2 hover:outline-white focus:ring-4 focus:outline-none focus:ring-blue-300 transition-colors duration-300"
                         onClick={handleOnClick}
                     >
                         CONTRATAR

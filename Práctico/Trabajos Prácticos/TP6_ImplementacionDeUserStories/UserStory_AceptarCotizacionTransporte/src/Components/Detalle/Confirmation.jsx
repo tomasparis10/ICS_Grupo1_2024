@@ -71,7 +71,7 @@ const Confirmation = () => {
                 </div>
                 <button
                     onClick={handleNavigate}
-                    className="w-full py-2 bg-[#03045E] text-white rounded-lg mt-4 hover:bg-[#003d7a] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                    className="w-full py-2 bg-[#00025f] text-white px-4 rounded-lg hover:bg-[#040799c5] hover:outline hover:outline-2 hover:outline-white transition-colors duration-300"
                 >
                     INICIO
                 </button>
