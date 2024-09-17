@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PersonalData from './PersonalData';
 import PaymentMethods from './PaymentMethods';
 import { useNavigate, useLocation } from "react-router-dom";
+import PaymentOptionCheckbox from './PaymentOptionCheckbox';
 
 const Order = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Order = () => {
       <PaymentMethods setPaymentMethod={setPaymentMethod} isDisabled={isDisabled} setIsDisabled={setIsDisabled} handleCancel={handleCancel} dataPedido={dataPedido} />
 
       {(paymentMethod === 'Debito/Credito' && isDisabled) && <PersonalData data={personalData} setData={setPersonalData} setIsDisabled={setIsDisabled} handleCancel={handleCancel} dataPedido={dataPedido} />}
+      {(['Efectivo', 'Contado al Retirar', ''].includes(paymentMethod) && isDisabled) && <PaymentOptionCheckbox setPaymentMethod={setPaymentMethod} handleCancel={handleCancel} setIsDisabled={setIsDisabled} dataPedido={dataPedido} />}
     </div>
   );
 }

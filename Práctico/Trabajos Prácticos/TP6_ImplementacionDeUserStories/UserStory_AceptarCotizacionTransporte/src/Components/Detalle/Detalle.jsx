@@ -34,6 +34,7 @@ const Detalle = () => {
         fechaEntrega,
         precio: total,
         tarjeta,
+        formaPago,
       }
     });
   };
@@ -90,7 +91,7 @@ const Detalle = () => {
                   alt="tarjeta"
                   className="h-5 w-5 mr-2" // Ajusta el tamaño del ícono con Tailwind
                 />
-                Tarjeta
+                {formaPago}
               </span>
             </p> : <p className="text-gray-200">
               <span className="flex items-center">
@@ -99,7 +100,7 @@ const Detalle = () => {
                   alt="Dinero"
                   className="h-5 w-5 mr-2" // Ajusta el tamaño del ícono con Tailwind
                 />
-                Efectivo
+                {formaPago}
               </span>
             </p>}
           </div>

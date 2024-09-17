@@ -154,7 +154,7 @@ const PersonalData = ({ data, setData, setIsDisabled, handleCancel, dataPedido }
 
   return (
     <div className="bg-[#0077B6] p-6 rounded-xl shadow-md mt-2">
-      <h2 className="text-lg font-semibold mb-4 text-white">Datos Personales</h2>
+      <h2 className="text-lg font-semibold mb-4 text-white">Datos de la Tarjeta</h2>
       <form className="space-y-4" onSubmit={handleConfirm}>
         <div>
           <input

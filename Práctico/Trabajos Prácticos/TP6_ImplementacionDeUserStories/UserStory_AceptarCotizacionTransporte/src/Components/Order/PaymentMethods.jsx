@@ -16,10 +16,6 @@ const PaymentMethods = ({ setPaymentMethod, isDisabled, setIsDisabled, handleCan
     } else {
       setPaymentMethodError('Se debe seleccionar una forma de pago.')
     }
-
-    if (tempPaymentMethod == 'Efectivo') {
-      navigate("/detalle", { state: { pedido: dataPedido.nroPedido, nombre: dataPedido.nombre, fechaRetiro: dataPedido.fechaRetiro, fechaEntrega: dataPedido.fechaEntrega, total: dataPedido.precio, formaPago: 'Efectivo' } });
-    }
   };
 
   return (
