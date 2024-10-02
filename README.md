@@ -45,9 +45,9 @@ Se creará una primera línea base una vez que se hayan cargado todos los archiv
 | Trabajos Prácticos            | `TP<<N>>_<<Nombre>>.pdf`            | ICS_Grupo1_2024/Práctico/Trabajos Prácticos          |
 | Ejercicios de clases          | `Ejercicio<<N>>_<<Tema>>.docx`      | ICS_Grupo1_2024/Práctico/Ejercicios de clases        |
 | Trabajos de investigación     | `<<Nombre>>_Grupo.pdf`              | ICS_Grupo1_2024/Práctico/Trabajos de investigación   |
-| Clases grabadas               | `ClasesGrabadas.xlsx`               | ICS_Grupo1_2024/                                     |
-| Programa de la materia        | `Programa_ICS_2024.pdf`             | ICS_Grupo1_2024/                                     |
-| Cronograma de clases          | `Cronograma_4K2_2024.xlsx`          | ICS_Grupo1_2024/                                     |
+| Clases grabadas               | `ClasesGrabadas.xlsx`               | ICS_Grupo1_2024/Clases grabadas   |
+| Programa de la materia        | `Programa_ICS_2024.pdf`             | ICS_Grupo1_2024/Programa de la materia   |
+| Cronograma de clases          | `Cronograma_4K2_2024.xlsx`          | ICS_Grupo1_2024/Cronograma de clases   |
 
 ---
 
